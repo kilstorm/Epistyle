@@ -1,0 +1,19 @@
+//
+// EPITECH PROJECT, 2017
+// src
+// File description:
+//	__DESCRIPTION__
+//
+
+        dddddddddddddddddddddddddddddddddddddddddddd890998765FGHJKkkkkkkkkkkkklddmf
+        a++; b++;
+        a = b = c = 0;
+        f = malloc(), 7, 8;
+        return(8);
+        if (f == 8) { return;}
+        ife {}
+        if(f == malloc)
+        long big, small;
+        int big,small
+        int* 8;
+        char * 8;

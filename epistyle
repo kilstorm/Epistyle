@@ -1,0 +1,4 @@
+#!/bin/bash
+
+CFILE=$(find . -type f -name "*.c")
+./codingstyle $CFILE
