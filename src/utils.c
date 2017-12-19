@@ -27,6 +27,8 @@ int detect_for(char *line)
         char *ret = "for";
         int k = 0;
 
+	if (str == NULL)
+		return (EXIT_MALLOC);
         memcpy(str, line, my_strlen(line) + 1);
 	while(!isalpha(*line) && *line != '\0')
                 line++;
@@ -34,4 +36,13 @@ int detect_for(char *line)
         if (k == 3)
 		return (EXIT_FOR);
         return (EXIT_SUCCESS);
+}
+
+int detect_alpha(char *line)
+{
+	int j = 0;
+
+	while(!isalpha(line[j]) && line[j] != '\0')
+		j++;
+	return (j);
 }

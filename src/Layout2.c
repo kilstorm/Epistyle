@@ -12,6 +12,8 @@ int check_return(char *line, int i)
         char *ret = "return";
         int k = 0;
 
+	if (str == NULL)
+		return (EXIT_MALLOC);
         memcpy(str, line, strlen(line) + 1);
         while(!isalpha(*line) && *line != '\0')
                 line++;
@@ -26,31 +28,11 @@ int check_return(char *line, int i)
         return (EXIT_SUCCESS);
 }
 
-int check_brackets(char *line, int i)
-{
-        int j = 0;
-
-        while(!isalpha(line[j]) && line[j] != '\0')
-                j++;
-        if (line[j] == 'i' && line[++j] == 'f' && !isalpha(line[++j])) {
-                while (line[j] != '\0') {
-                        if (line[j] == '}') {
-                                my_printf("      line %d : L4 Curly Brackets\n", i);
-                                my_printf("     %s", line);
-                                return (EXIT_FAULT);
-                        }
-                        j++;
-                }
-        }
-        return (EXIT_SUCCESS);
-}
-
 int check_brackets2(char *line, int i)
 {
         int j = 0;
 
-        while(!isalpha(line[j]) && line[j] != '\0')
-                j++;
+	j = detect_alpha(line);
         if (line[j] == 'i' && line[++j] == 'f' && !isalpha(line[++j])
         && line[j] != ' ') {
                 my_printf("      line %d : L4 Curly Brackets\n", i);

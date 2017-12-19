@@ -1,4 +1,15 @@
 #!/bin/bash
 
 CFILE=$(find . -type f -name "*.c")
-/usr/bin/Epistyle/codingstyle $CFILE
+COUNT=$(set -- $CFILE; echo $#)
+ldIFS="$IFS"
+IFS='
+'
+IFS=${IFS:0:1} # this is useful to format your code with tabs
+lines=( $CFILE )
+IFS="$oldIFS"
+for line in "${lines[@]}"
+	do
+		/usr/bin/Epistyle/codingstyle $line
+done
+#$CFILE

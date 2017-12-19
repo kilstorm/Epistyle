@@ -18,6 +18,7 @@
 #define EXIT_FAILED 84
 #define EXIT_FOR 1
 #define EXIT_COMMENT 2
+#define EXIT_MALLOC 84
 
 #define RED     "\x1b[31m"
 #define GREEN   "\x1b[32m"
@@ -38,14 +39,13 @@ int check_one_statement(char *line, int i);
 int check_aftersemicolon(char *line, int i);
 int check_equal(char *line, int i);
 int check_return(char *line, int i);
-int check_virgule(char *line, int i);
-int check_brackets(char *line, int i);
 int check_brackets2(char *line, int i);
 
 /*---------------Utils---------------*/
 
 int detect_comment(char *line);
 int detect_for(char *line);
+int detect_alpha(char *line);
 int count_columns(char *line, int i, ssize_t read);
 
 /*--------------Variable-------------*/

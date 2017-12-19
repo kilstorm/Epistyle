@@ -1,0 +1,8 @@
+#!/bin/bash
+
+rm -r /usr/bin/Epistyle/
+rm /usr/local/bin/epistyle
+mkdir /usr/bin/Epistyle/
+cp -r * /usr/bin/Epistyle/
+make -C /usr/bin/Epistyle/
+mv /usr/bin/Epistyle/epistyle /usr/local/bin/
