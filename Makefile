@@ -5,9 +5,9 @@
 ## Makefile push_swap
 ##
 
-NAME		= codingstyle
+NAME		= moulistyle
 
-CC		= clang
+CC		= gcc
 
 RM		= rm -rf
 
@@ -24,8 +24,8 @@ LIB	= lib/my/libmy.a
 LIB2 	= lib/my/
 MAKELIB	= make -C lib/my/
 
-CFLAGS		= -Weverything
-CFLAGS		+= -Iinclude/		\
+CFLAGS		= -W -Wall
+CFLAGS		+= -Iinclude/			\
 		   -Ilib/my/include/
 CFLAGS	+= $(LIBS)
 

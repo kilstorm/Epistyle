@@ -50,5 +50,11 @@ int count_columns(char *line, int i, ssize_t read);
 
 /*--------------Variable-------------*/
 
+/*--------------Library--------------*/
+
+int my_printf(const char *format, ...);
+size_t my_strlen(const char *str);
+void *my_memcpy(void *dest, const void *src, size_t n);
+void *my_memset(void *s, int c, size_t n);
 
 #endif

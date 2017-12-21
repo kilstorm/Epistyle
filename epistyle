@@ -10,6 +10,5 @@ lines=( $CFILE )
 IFS="$oldIFS"
 for line in "${lines[@]}"
 	do
-		/usr/bin/Epistyle/codingstyle $line
+		/usr/bin/Epistyle/moulistyle $line
 done
-#$CFILE

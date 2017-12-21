@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir /usr/bin/Epistyle/
-cp -r * /usr/bin/Epistyle/
-make -C /usr/bin/Epistyle/
-mv /usr/bin/Epistyle/epistyle /usr/local/bin/
+sudo mkdir /usr/bin/Epistyle/
+sudo cp -r * /usr/bin/Epistyle/
+sudo make -C /usr/bin/Epistyle/
+sudo mv /usr/bin/Epistyle/epistyle /usr/local/bin/
